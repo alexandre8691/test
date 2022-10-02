@@ -1,6 +1,6 @@
 const path = require('path')
 const express = require('express')
-
+const port = process.env.PORT || 3000
 
 const server = (name)=>{
 
@@ -14,7 +14,7 @@ const server = (name)=>{
         res.send('')
     })
 
-    app.listen(3000,()=>{
+    app.listen(port,()=>{
         console.log('server is up !')
     })
   
