@@ -6,6 +6,6 @@ process.stdout.write('Quel est votre nom ? > ')
 
 process.stdin.on('data',(data)=>{
     name = data.toString().trim()
-    server(name)
+    server('allan')
 })
 
