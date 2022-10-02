@@ -1,11 +1,21 @@
-const server = require('./tools/server')
 
-let name;
 
-process.stdout.write('Quel est votre nom ? > ')
+const path = require('path')
+const express = require('express')
+const port = process.env.PORT || 3000
 
-process.stdin.on('data',(data)=>{
-    name = data.toString().trim()
-    server('allan')
-})
 
+
+    const publicPath = path.join(__dirname,'/public')
+
+    const app = express()
+
+    app.use(express.static(publicPath))
+
+    app.get('',(req,res)=>{
+        res.send('')
+    })
+
+    app.listen(port,()=>{
+        console.log('server is up !')
+    })
